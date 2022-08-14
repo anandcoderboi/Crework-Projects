@@ -12,7 +12,7 @@ body{
 }
 .signup_form{
     width: 50%;
-    height: 55%;
+    height: 80%;
     background: rgba(70, 12, 10, 0.9);
     color: white;
     display: flex;

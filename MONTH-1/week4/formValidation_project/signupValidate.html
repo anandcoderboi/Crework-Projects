@@ -70,12 +70,12 @@
                 document.getElementById("email").style.borderColor="green"
 
                 }
-            var numbers = /[0-9]/g;
+            /*var numbers = /[0-9]/g;
             if(passwordEntered.match(numbers)){
                     passNumError.classList.add("num_validate");
                 }else{
                     passNumError.classList.remove("num_validate");
-                    }
+                    }*/
 
             if(passwordEntered.length < 4 || passwordEntered.length > 12){
                 isPasswordValid = false
@@ -85,10 +85,10 @@
         
             if(!isPasswordValid){
                 passwordError.classList.add('show')
-                 document.getElementById("password").style.borderColor="red"
+                document.getElementById("password").style.borderColor="red"
                 } else {
                 passwordError.classList.remove('show')
-                 document.getElementById("password").style.borderColor="green"
+                document.getElementById("password").style.borderColor="green"
                 }
             
             }
