@@ -1,0 +1,99 @@
+body{
+    font-family:sans-serif
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+    display:grid;
+    place-items: center;
+    background: #caf0f8;
+    position: relative;
+    
+}
+.signup_form{
+    width: 50%;
+    height: 55%;
+    background: rgba(70, 12, 10, 0.9);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 10px 5px 5px rgba(78, 5, 54, 0.658);
+    box-sizing: border-box;
+    
+}
+.signup_heading{
+    text-align: center;
+    
+}
+
+.inputs{
+    display:flex;
+    flex-direction: column;
+    row-gap: 2rem;
+}
+.input_container {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin: auto;
+}
+.button_container{
+    display: grid;
+    margin: auto;
+    place-items: center;
+    width: 90%;
+        
+        
+}
+.signup_form button:hover {
+    background: #b6a6a4;
+}
+
+
+#button_signup{
+        padding: 10px 30px 10px 30px;
+        font-family: inherit;
+        border-radius: 1.5rem;
+        border: 2px solid grey;
+        cursor: pointer;
+
+}
+.input_container label{
+        font-weight: 300;
+        margin-bottom: .25rem;
+        font-size: 1.5em;
+}
+.input_container input {
+    outline: none;
+    border: 3px solid grey;
+    padding: 0.75rem .75rem;
+    border-radius: .5rem;
+}
+.pass_error_msg,
+    .email_error_msg{
+        display:none
+
+        }
+
+
+
+.pass_error_msg.show,.email_error_msg.show
+{
+        display: block;
+        color: red;
+        font-size: .75rem;
+        margin-top: .25rem;
+}
+.pass_error_message{
+    display:none;
+
+}
+.num_validate{
+    display: block;
+    color: red;
+    font-size: .75rem;
+    margin-top: .25rem;
+}

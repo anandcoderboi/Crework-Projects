@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style1.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <form class="signup_form">
+            <h1 id="heading" class="signup_heading">Log In</h1>
+            <div class="inputs">
+                
+                <div class="input_container">
+                    <label>Email</label>
+                    <input type="text" name="email" id="email" placeholder="abc@mail.com"/>
+                    <p id="email_error_msg" class="email_error_msg">E-mail is invalid</p>
+                    
+                </div>
+                <div class="input_container">
+                    <label >Password</label>
+                    <input type="Password" name="password" id="password" placeholder="Enter Password"/>
+                    <p id="pass_error_msg" class="pass_error_msg"></p>
+                    <P id="pass_error_message" class="pass_error_message"> </P>
+
+                </div>
+                <div class="button_container">
+                    <button type="Submit" id="button_signup">Log In</button>    
+                </div>
+            </div>
+        </form>
+    </div>
+    <script>
+        const signupButton = document.getElementById("button_signup");
+        const emailID = document.getElementById("email");
+        const emailError = document.getElementById("email_error_msg")
+        const passwordError = document.getElementById("pass_error_msg")
+        const passNumError=document.getElementById("pass_error_message")
+        const password = document.getElementById("password")
+
+        
+        
+
+        const handleSignupClick = (event) => {
+            event.preventDefault();
+
+            let isEmailValid=false
+            let isPasswordValid = false
+        
+            let emailEntered = emailID.value;
+            let passwordEntered = password.value;
+            let correctEmail= "sahil@crework.in"
+            let correctPass= "sahil"
+
+
+            if(emailEntered.includes("@") && (emailEntered.includes(".in")|| emailEntered.includes(".com"))){
+                isEmailValid = true 
+                } else {
+                    isEmailValid = false
+                }
+            if(!isEmailValid) {
+                emailError.classList.add('show')
+                document.getElementById("email").style.borderColor="red"
+            }    else {
+                emailError.classList.remove('show')
+                document.getElementById("email").style.borderColor="green"
+
+                }
+            var numbers = /[0-9]/g;
+            if(passwordEntered.match(numbers)){
+                    passNumError.classList.add("num_validate");
+                }else{
+                    passNumError.classList.remove("num_validate");
+                    }
+
+            if((passwordEntered===correctPass) && (emailEntered===correctEmail)){
+                alert("Successfully loggedin")
+                document.getElementById("password").style.borderColor="green"
+                document.getElementById("email").style.borderColor="green"
+            }
+            else{
+                alert("incorrect credentials")
+                document.getElementById("password").style.borderColor="red"
+                document.getElementById("email").style.borderColor="red"
+            }
+            
+            }
+        
+        signupButton.addEventListener("click", handleSignupClick)           
+            
+        
+</script>
+    
+</body>
+</html>
