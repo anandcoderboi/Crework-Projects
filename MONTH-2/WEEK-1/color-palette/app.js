@@ -4,8 +4,7 @@ console.log(colors)
 
 function generateColors() {
     for (color of colors){
-    let hexCode = '#' + Math.random().toString(16).substring(2,8)
-    console.log(hexCode)
+    let hexCode = '#' + Math.random().toString(16).substring(2, 8);
     color.style.backgroundColor = hexCode;
     color.innerHTML = hexCode;
     
