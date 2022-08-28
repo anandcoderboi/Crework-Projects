@@ -33,4 +33,3 @@ trashBtnEl.addEventListener("click", () => {
 });
 }
 
-function updateLocalStorage()
